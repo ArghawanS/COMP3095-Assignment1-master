@@ -5,63 +5,65 @@
     <title>Register Page - COMP3095 - Assignment 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container mt-5">
-        <h2 class="my-2">REGISTRATION FORM</h2>
+<body style="background-color: #c1bdba">
+<br/><br/><br/>
+    <div class="container-fluid" ></div>
+        <div class="row ">
+            <div class="col-4" ></div>
 
-        <form th:object="${user}" th:action="@{/register}" method="post">
+            <div class="shadow bg-body rounded col-4 p-5" >
+                <div class="row my-1" >
+        <h1 style="text-align: center">REGISTRATION FORM</h1>
+                </div>
+
+        <form th:object="${user}" th:action="@{/register}" method="post" >
             <div class="row my-1">
-                <div class="col-1">
-                    <label for="email" class="col-form-label">Email</label>
+                <div class="col-sm-4">
+                    <label for="email" class="col-form-label" >Email</label>
                 </div>
                 <div class="col-auto">
-                    <input id="email" class="form-control" th:field="*{email}" required>
-                </div>
-                <div class="col-auto">
-                    <span class="form-text">
-                        Email will be used to log in and cannot be changed! Please provide a valid email for further password related options.
-                    </span>
+                    <input id="email" class="form-control" th:field="*{email}" size="35%" required>
                 </div>
             </div>
             <div class="row my-1">
-                <div class="col-1">
+                <div class="col-sm-4">
                     <label for="userName" class="col-form-label">Username</label>
                 </div>
                 <div class="col-auto">
-                    <input id="userName" class="form-control" th:field="*{userName}" required>
+                    <input id="userName" class="form-control" th:field="*{userName}"  size="35%" required>
                 </div>
-                <div class="col-auto">
-                    <span class="form-text">
-                        This name will be displayed instead of your real name.
-                    </span>
-                </div>
+
             </div>
             <div class="row my-1">
-                <div class="col-1">
+                <div class="col-sm-4">
                     <label for="firstName" class="col-form-label">Firstname</label>
                 </div>
                 <div class="col-auto">
-                    <input id="firstName" class="form-control" th:field="*{firstName}" required>
+                    <input id="firstName" class="form-control" th:field="*{firstName}"  size="35%" required>
                 </div>
             </div>
             <div class="row my-1">
-                <div class="col-1">
-                    <label for="lastName" class="col-form-label">Lastname</label>
+                <div class="col-sm-4">
+                    <label for="lastName" class="col-form-label" >Lastname</label>
                 </div>
                 <div class="col-auto">
-                    <input id="lastName" class="form-control" th:field="*{lastName}" required>
+                    <input id="lastName" class="form-control" th:field="*{lastName}" size="35%" required>
                 </div>
             </div>
             <div class="row my-1">
-                <div class="col-1">
+                <div class="col-sm-4">
                     <label for="password" class="col-form-label">Password</label>
                 </div>
                 <div class="col-auto">
-                    <input id="password" type="password" class="form-control" th:field="*{password}" required>
+                    <input id="password" type="password" class="form-control" th:field="*{password}"  size="35%" required>
                 </div>
+            </div><br/>
+            <div class="row my-1">
+            <button type="submit" class="btn btn-primary" style="background: #1ab188">Submit</button>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
